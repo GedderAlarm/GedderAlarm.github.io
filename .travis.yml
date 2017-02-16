@@ -1,0 +1,11 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAJOUAWQQUBP2N3LGA
+  secret_access_key:
+    secure: JiGvLx4M14p7d852cLFdbaPTsI4fX2N7V9dVTnD6erQLJKkbDKblnjsUT+h4Zbcu9b7YOyXSNw0IeXTXk3riuZ5+TTbCXrvPaSn0NBuAUjk5D83VnbqGRTxFMZcDTZ6UVClxHFfXVId5sb+J8BS2G0IrGu3OuQqmBHqk8/enAbe9IArxxTxGm2+lb4nLJANDReYi4lLobLU28HgaDpC7CajyWMVLSl8fdx+AieajHdh9M3m+h94z0vHwF7pXX65GIMoDUqcwdObxTGTZdaVof+Y1GE3YQ14c7QJHv/uY0FS4CRNSNPCas0twz2Za23tsnW7Qfj9IVWr0TtP3inTL5pSFbwS7nP+Op5t5KIOTj0ZRJ4Mt1Jdu722VkPafTadi6Gt67Iq4KuClLNzDbNgtn9uQ9dt3c8yM2OQYSr7NoK952RbJVP/tTHlEfXt6cvRpVeaO/Y9NugI6avjXMhb1L55JQlgFBCucZyCLizsRHf4YQ6J4+kTOVO0dXRwkMKE+MGa4oPSBqwvEs7c4tgfLhXa6Lgts/YGEvcFZvYiXKc/6fOKinrUfYnNNh7V2fZLyl3wdghneSUMsKbY/LsKEc8+HaFRh66LJmFDUarSeqvV81MA1a2fVDIcxd5jPiug39a7B+TS9GZOtUdt2G0JBnTu0wsea9gofvEysGBnSQrQ=
+  bucket: gedderalarm.github.io
+  upload-dir: staging
+  acl: public_read
+  on:
+    repo: GedderAlarm/GedderAlarm.github.io
+    branch: feature__integration

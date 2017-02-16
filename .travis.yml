@@ -13,6 +13,8 @@ deploy:
   bucket: gedderalarm.github.io
   upload-dir: staging
   acl: public_read
+  skip_cleanup: true
+  region: us-east-1
   on:
     repo: GedderAlarm/GedderAlarm.github.io
     branch: feature__integration

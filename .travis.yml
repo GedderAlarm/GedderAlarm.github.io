@@ -5,15 +5,18 @@ install:
 notifications:
   email: false
 
+# Only for pushes
+before_deploy:
+  - date=`date +%Y-%m-d-%H-%M-%S`
 deploy:
   provider: s3
   access_key_id: AKIAJBDJHEBXXBRA6PKA
   secret_access_key:
     secure: KQ8qPa/MMIRQVbla9f9InP/t8vFB2ZUVSM9ejy6WrJx2MuveZKqtfjSNuR59bWwlmhWbYD6s3adXDQjnN0eRKJE+ash9zro/c0EN5g2I9zta0hxqbFLgPwRGsSpjIo4gr+iw57JAF5IP7+6nxBkQueJDMWO6HRPWEnhZWm+bkQEubKHTz0YvVaxBTN53c9XaMwIoc0GM9hkTBGcnUYqG0/1fLSrWT40KPP3bU1OccXdNX6X4DIWvm1XAw34VELTyBkjwpxyO241GtlTQ8npcto9tP0yiOfIzuxDAf+s70b2NzfTWgefKE8wiHf5kyMUJOMcbfr814nMgoueFGvvF0pLjWYDRZI8VfsHzAagC5lkSctAb5+N2j61XyO3d6g4wV6bkK1lAmGTpzou8LrCx3aBy0EOlso4vYDCu/zBMLWYt227uxBkHjjCKq8LxcJBxNdVPUmLcM1FpCYBS60mOJBlb7/zTVVODzxT8PFoQ8V1u5rZfbYgklpNDvX2N7gS/fMTCikWD090c55FsWpIRyeKxVaJNk/t4mKefUMSYILb63N0FPZG8UaRO6Yh/413wZ8zYloCTQMEHHyyN1w41/DqjiOylRsM8u2hbw6Sa5edfPY8kc3ZNKwTNnyMoDeEQwinukL8CkEu4QLQxhSt85ovgMpyXW+8bz/VwQE7pH50=
   bucket: gedderalarm.github.io
-  upload-dir: staging/$TRAVIS_COMMIT
+  upload-dir: staging/$date
   acl: public_read
   region: us-east-1
   on:
     repo: GedderAlarm/GedderAlarm.github.io
-    branch: feature__integration
+    branch: dev

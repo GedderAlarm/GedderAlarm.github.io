@@ -7,7 +7,7 @@ notifications:
 
 # Only for pushes
 before_deploy:
-  - date=`date +%Y-%m-d-%H-%M-%S`
+  - date=`date +%Y-%m-%d-%H-%M-%S`
 deploy:
   provider: s3
   access_key_id: AKIAJBDJHEBXXBRA6PKA
